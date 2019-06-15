@@ -1,0 +1,3 @@
+class Gato extends Animal{
+
+}

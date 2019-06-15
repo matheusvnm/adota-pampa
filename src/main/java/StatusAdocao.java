@@ -1,0 +1,3 @@
+public enum StatusAdocao {
+    ESPERANDO_OPCAO, ESPERANDO_SIM_NAO_OUTRO, LISTANDO_OPCOES
+}
