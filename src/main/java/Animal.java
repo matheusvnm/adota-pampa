@@ -4,14 +4,14 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 @JsonDeserialize(as = Animal.class)
 public class Animal {
 
-    protected int id;
-    protected String name;
-    protected String genero;
-    protected String idade;
-    protected String image;
-    protected boolean isAdotado;
-    protected String nomeDono;
-    protected String telefoneDono;
+    private int id;
+    private String name;
+    private String genero;
+    private String idade;
+    private String image;
+    private boolean isAdotado;
+    private String nomeDono;
+    private String telefoneDono;
 
     @JsonCreator
     public Animal(){}
