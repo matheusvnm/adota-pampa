@@ -13,8 +13,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <source>7</source>
+                    <target>7</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -24,13 +24,19 @@
             <id>jboss-maven2-release-repository</id>
             <name>JBoss</name>
             <url>http://repository.jboss.org/maven2/</url>
-        </repository></repositories>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
             <version>3.4.14</version>
+        </dependency>
+        <dependency>
+            <groupId>io.soabase.exhibitor</groupId>
+            <artifactId>exhibitor-standalone</artifactId>
+            <version>1.6.0</version>
         </dependency>
     </dependencies>
 

@@ -37,26 +37,7 @@ class ExternalConnection {
             Console.log("Content-Length: " + params.length() + "");
             Console.log("");
             Console.log(params);
-            Console.log("\n--------------Inicio");
-
-            BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
-
-
-            String linhaDeResposta;
-
-            boolean error = true;
-            while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
-                if (linhaDeResposta.contains("OK")) {
-                    Console.log("Tudo certo");
-                    error = false;
-                }
-                Console.log("Aqueduct:: " + linhaDeResposta);
-            }
-
-            connectionToserver.close();
-            System.out.println("\nBotToAqueduct--------------Fim da Conexão");
-            if (error)
-                throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
+            connectionServer(connectionToserver);
         } catch (SocketException e) {
             System.out.println("O servidor de dados não conseguiu responder, possívelmente caiu ou está offline");
         } catch (JsonProcessingException e) {
@@ -66,6 +47,29 @@ class ExternalConnection {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void connectionServer(Socket connectionToserver) throws IOException, PostgresConnectionErrorException {
+        Console.log("\n--------------Inicio");
+
+        BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
+
+
+        String linhaDeResposta;
+
+        boolean error = true;
+        while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
+            if (linhaDeResposta.contains("OK")) {
+                Console.log("Tudo certo");
+                error = false;
+            }
+            Console.log("Aqueduct:: " + linhaDeResposta);
+        }
+
+        connectionToserver.close();
+        System.out.println("\nBotToAqueduct--------------Fim da Conexão");
+        if (error)
+            throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
     }
 
     public List<Animal> getAnimais(AnimalEnumerator tipoAnimal) throws PostgresConnectionErrorException {
@@ -94,41 +98,7 @@ class ExternalConnection {
             Console.log("");
 
 
-            Console.log("\n--------------Inicio");
-
-            BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
-
-
-            String linhaDeResposta;
-
-            boolean proximaLinhaContemDados = false;
-            boolean error = true;
-            String dados = "";
-            while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
-                if (linhaDeResposta.contains("OK")) {
-                    Console.log("Tudo certo");
-                    error = false;
-                }
-
-                if (linhaDeResposta.equals("") || linhaDeResposta.equals("\r\n")) {
-                    Console.log("proxima dados");
-                    proximaLinhaContemDados = true;
-                } else if (proximaLinhaContemDados) {
-                    dados = linhaDeResposta;
-                }
-                Console.log("Aqueduct:: " + linhaDeResposta);
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-            List<Animal> myObjects = null;
-            if (!error)
-                myObjects = mapper.readValue(dados, mapper.getTypeFactory().constructCollectionType(List.class, Animal.class));
-
-            connectionToserver.close();
-            System.out.println("\nBotToAqueduct--------------Fim da Conexão");
-            if (error)
-                throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
-            return myObjects;
+            return getAnimals(connectionToserver);
         } catch (SocketException e) {
             System.out.println("O servidor de dados não conseguiu responder, possívelmente caiu ou está offline");
         } catch (JsonProcessingException e) {
@@ -139,6 +109,44 @@ class ExternalConnection {
             e.printStackTrace();
         }
         return null;
+    }
+
+    private List<Animal> getAnimals(Socket connectionToserver) throws IOException, PostgresConnectionErrorException {
+        Console.log("\n--------------Inicio");
+
+        BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
+
+
+        String linhaDeResposta;
+
+        boolean proximaLinhaContemDados = false;
+        boolean error = true;
+        String dados = "";
+        while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
+            if (linhaDeResposta.contains("OK")) {
+                Console.log("Tudo certo");
+                error = false;
+            }
+
+            if (linhaDeResposta.equals("") || linhaDeResposta.equals("\r\n")) {
+                Console.log("proxima dados");
+                proximaLinhaContemDados = true;
+            } else if (proximaLinhaContemDados) {
+                dados = linhaDeResposta;
+            }
+            Console.log("Aqueduct:: " + linhaDeResposta);
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        List<Animal> myObjects = null;
+        if (!error)
+            myObjects = mapper.readValue(dados, mapper.getTypeFactory().constructCollectionType(List.class, Animal.class));
+
+        connectionToserver.close();
+        System.out.println("\nBotToAqueduct--------------Fim da Conexão");
+        if (error)
+            throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
+        return myObjects;
     }
 
     public List<Animal> getAnimaisPorDono(String dono, String telefone) throws PostgresConnectionErrorException {
@@ -160,37 +168,7 @@ class ExternalConnection {
             saidaParaOServidor.println("");
             saidaParaOServidor.flush();
 
-            Console.log("\n--------------Inicio");
-
-            BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
-            String linhaDeResposta;
-            boolean proximaLinhaContemDados = false;
-            boolean error = true;
-            String dados = "";
-            while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
-                if (linhaDeResposta.contains("OK")) {
-                    Console.log("Tudo certo");
-                    error = false;
-                }
-                if (linhaDeResposta.equals("") || linhaDeResposta.equals("\r\n")) {
-                    Console.log("proxima dados");
-                    proximaLinhaContemDados = true;
-                } else if (proximaLinhaContemDados) {
-                    dados = linhaDeResposta;
-                }
-                Console.log("Aqueduct:: " + linhaDeResposta);
-            }
-
-            ObjectMapper mapper = new ObjectMapper();
-            List<Animal> myObjects = null;
-            if (!error)
-                myObjects = mapper.readValue(dados, mapper.getTypeFactory().constructCollectionType(List.class, Animal.class));
-
-            connectionToserver.close();
-            System.out.println("\nBotToAqueduct--------------Fim da Conexão");
-            if (error)
-                throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
-            return myObjects;
+            return getAnimals(connectionToserver);
         } catch (SocketException e) {
             System.out.println("O servidor de dados não conseguiu responder, possívelmente caiu ou está offline");
         } catch (JsonProcessingException e) {
@@ -227,22 +205,7 @@ class ExternalConnection {
             saidaParaOServidor.println("");
             saidaParaOServidor.flush();
 
-            Console.log("\n--------------Inicio");
-
-            BufferedReader respotaDoServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
-            String linhaDeResposta;
-            boolean error = true;
-            while ((linhaDeResposta = respotaDoServidor.readLine()) != null) {
-                if (linhaDeResposta.contains("OK")) {
-                    Console.log("Tudo certo");
-                    error = false;
-                }
-                Console.log("Aqueduct:: " + linhaDeResposta);
-            }
-            connectionToserver.close();
-            System.out.println("\nBotToAqueduct--------------Fim da Conexão");
-            if (error)
-                throw new PostgresConnectionErrorException("algum erro aconteceu ao conectar com o banco, veja o console");
+            connectionServer(connectionToserver);
         } catch (SocketException e) {
             System.out.println("O servidor de dados não conseguiu responder, possívelmente caiu ou está offline");
         } catch (JsonProcessingException e) {

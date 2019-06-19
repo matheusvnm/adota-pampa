@@ -13,16 +13,14 @@ public class ZKManagerImpl implements ZKManager {
     private static ZKConnection zkConnection;
 
     public ZKManagerImpl() {
-        org.apache.log4j.BasicConfigurator.configure(new NullAppender());
         initialize();
     }
 
+
     private void initialize() {
         try {
-            Console.log("Nova conexão foi criada");
             zkConnection = new ZKConnection();
             String host = "localhost";
-            Console.log("Conexão no servidor: " + host);
             zkeeper = zkConnection.connect(host);
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,7 +45,6 @@ public class ZKManagerImpl implements ZKManager {
         byte[] b = null;
         try {
             b = zkeeper.getData(path, null, null);
-            Console.log("Criação bem sucedida do nodo!\n" + "Caminho: " + path);
             return new String(b, "UTF-8");
         } catch (KeeperException e) {
             e.printStackTrace();
@@ -56,7 +53,6 @@ public class ZKManagerImpl implements ZKManager {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        Console.log("Erro na criação dos dados do nodo");
         return null;
     }
 
