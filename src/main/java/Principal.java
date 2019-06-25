@@ -5,31 +5,20 @@ import java.io.IOException;
 public class Principal {
     public static void main(String[] args) {
 
-        // Há bugs relacionados ao logger do Apache. Logo retirei ele para não haver bugs.
 
+        final String ZNODEPATH = "/NodoDeRedes";
         ZKManager manager = new ZKManagerImpl();
         byte[] data = "Servidor de Redes".getBytes();
-        String path = "/NodoDeRedes";
 
         try {
-
             Console.log("Criando nodo...");
-            manager.create(path, data);
+            manager.create(ZNODEPATH, data);
             Console.log("Nodo criado.");
         } catch (KeeperException e) {
             Console.log("Esse nodo já existe! Continuando programa");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        try {
-            Console.log("Update do Nodo");
-            manager.update(path, "String do usuário".getBytes());
-        } catch (KeeperException | InterruptedException e) {
-            e.printStackTrace();
-        }
-        Console.log((String) manager.getZNodeData(path, false));
-
     }
 
     public static void servidores() {

@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 
 class ZKConnection {
     private ZooKeeper zoo;
-    CountDownLatch connectionLatch = new CountDownLatch(1);
+    private CountDownLatch connectionLatch = new CountDownLatch(1);
 
     ZooKeeper connect(String host) throws IOException, InterruptedException {
         this.zoo = new ZooKeeper(host, 2000, new Watcher() {
