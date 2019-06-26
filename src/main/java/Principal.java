@@ -1,24 +1,26 @@
-import org.apache.zookeeper.KeeperException;
-
 import java.io.IOException;
 
 public class Principal {
     public static void main(String[] args) {
 
 
-        final String ZNODEPATH = "/NodoDeRedes";
-        ZKManager manager = new ZKManagerImpl();
+        String ZNODEPATH = "/NodoCentral";
         byte[] data = "Servidor de Redes".getBytes();
+        Executor executorManager = null;
 
         try {
             Console.log("Criando nodo...");
-            manager.create(ZNODEPATH, data);
+            executorManager = new Executor("localhost:2181", null, null);
             Console.log("Nodo criado.");
-        } catch (KeeperException e) {
-            Console.log("Esse nodo já existe! Continuando programa");
-        } catch (InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
+        assert executorManager != null;
+        executorManager.create(ZNODEPATH);
+        new Thread(executorManager).start();
+        // Método de escrita no zNode
+        //executorManager.update();
+
     }
 
     public static void servidores() {

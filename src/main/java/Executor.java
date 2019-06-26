@@ -1,25 +1,19 @@
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.Watcher;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 
 public class Executor implements Watcher, Runnable, DataMonitor.DataMonitorListener {
-    private String zNode;
     private DataMonitor dataMonitor;
     private ZooKeeper zKeeper;
     private String fileName;
     private String[] exec;
     private Process child;
 
-    public Executor(String hostPort, String zNode, String fileName, String[] exec) throws IOException {
+    Executor(String hostPort, String fileName, String[] exec) throws IOException {
         this.fileName = fileName;
         this.exec = exec;
         zKeeper = new ZooKeeper(hostPort, 3000, this);
-        dataMonitor = new DataMonitor(zKeeper, zNode, null, this);
     }
 
     public void process(WatchedEvent event) {
@@ -84,6 +78,36 @@ public class Executor implements Watcher, Runnable, DataMonitor.DataMonitorListe
         }
     }
 
+    void create(String path) {
+        try {
+            this.zKeeper.create(path, null, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        } catch (KeeperException e) {
+            Console.log("Nodo já existente! Continuando execução do programa");
+        } catch (InterruptedException e) {
+            Console.log("[ERRO] Conexão encerrada!");
+        } finally {
+            dataMonitor = new DataMonitor(this.zKeeper, path, null, this);
+        }
+
+    }
+
+    public Object getZNodeData(String path) {
+        byte[] b = null;
+        try {
+            b = this.zKeeper.getData(path, null, null);
+            return new String(b, StandardCharsets.UTF_8);
+        } catch (KeeperException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void update(String path, byte[] data) throws KeeperException, InterruptedException {
+        int version = this.zKeeper.exists(path, true).getVersion();
+        this.zKeeper.setData(path, data, version);
+    }
+
+
     static class StreamWriter extends Thread {
         OutputStream os;
 
@@ -108,15 +132,6 @@ public class Executor implements Watcher, Runnable, DataMonitor.DataMonitorListe
 
         }
     }
-
-    public String getzNode() {
-        return zNode;
-    }
-
-    public void setzNode(String zNode) {
-        this.zNode = zNode;
-    }
-
 
 
 }

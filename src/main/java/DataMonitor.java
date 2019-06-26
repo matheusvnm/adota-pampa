@@ -1,7 +1,3 @@
-/**
- * A simple class that monitors the data and existence of a ZooKeeper
- * node. It uses asynchronous ZooKeeper APIs.
- */
 import java.util.Arrays;
 
 import org.apache.zookeeper.KeeperException;
@@ -14,27 +10,22 @@ import org.apache.zookeeper.data.Stat;
 
 public class DataMonitor implements Watcher, StatCallback {
 
-    private ZooKeeper zk;
-    private String znode;
+    private ZooKeeper zKeeper;
+    private String zNode;
     private Watcher chainedWatcher;
-    private boolean dead;
+    private boolean dead = false;
     private DataMonitorListener listener;
-    private byte prevData[];
+    private byte[] prevData;
 
-    public DataMonitor(ZooKeeper zk, String znode, Watcher chainedWatcher,
-                       DataMonitorListener listener) {
-        this.zk = zk;
-        this.znode = znode;
+    DataMonitor(ZooKeeper zk, String zNode, Watcher chainedWatcher,
+                DataMonitorListener listener) {
+        this.zKeeper = zk;
+        this.zNode = zNode;
         this.chainedWatcher = chainedWatcher;
         this.listener = listener;
-        // Get things started by checking if the node exists. We are going
-        // to be completely event driven
-        zk.exists(znode, true, this, null);
+        zk.exists(zNode, true, this, null);
     }
 
-    /**
-     * Other classes use the DataMonitor by implementing this method
-     */
     public interface DataMonitorListener {
         /**
          * The existence status of the node has changed.
@@ -69,9 +60,9 @@ public class DataMonitor implements Watcher, StatCallback {
                     break;
             }
         } else {
-            if (path != null && path.equals(znode)) {
+            if (path != null && path.equals(zNode)) {
                 // Something has changed on the node, let's find out
-                zk.exists(znode, true, this, null);
+                zKeeper.exists(zNode, true, this, null);
             }
         }
         if (chainedWatcher != null) {
@@ -95,14 +86,14 @@ public class DataMonitor implements Watcher, StatCallback {
                 return;
             default:
                 // Retry errors
-                zk.exists(znode, true, this, null);
+                zKeeper.exists(zNode, true, this, null);
                 return;
         }
 
         byte[] b = null;
         if (exists) {
             try {
-                b = zk.getData(znode, false, null);
+                b = zKeeper.getData(zNode, false, null);
             } catch (KeeperException e) {
                 // We don't need to worry about recovering now. The watch
                 // callbacks will kick off any exception handling
@@ -120,10 +111,6 @@ public class DataMonitor implements Watcher, StatCallback {
 
     boolean isDead() {
         return dead;
-    }
-
-    public void setDead(boolean dead) {
-        this.dead = dead;
     }
 
 }
