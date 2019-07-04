@@ -22,7 +22,7 @@ public class Client {
 }
 
 
-class BotServerConnector {s
+class BotServerConnector {
 
 
     void connect() throws IOException, KeeperException, InterruptedException {
