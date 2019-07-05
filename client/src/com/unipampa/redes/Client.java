@@ -1,8 +1,5 @@
 package com.unipampa.redes;
 
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.ZooKeeper;
-
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -10,11 +7,12 @@ import java.net.SocketException;
 import java.util.Scanner;
 
 public class Client {
+
     public static void main(String[] args) {
         BotServerConnector botServerConnector = new BotServerConnector();
         try {
             botServerConnector.connect();
-        } catch (IOException | KeeperException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -23,23 +21,34 @@ public class Client {
 
 
 class BotServerConnector {
+    void connect() throws IOException {
 
-
-    void connect() throws IOException, KeeperException, InterruptedException {
-        final String ZNODEPATH = "/NodoCentral";
-        ZooKeeper zKeeper = new ZooKeeper("localhost", 3000, null);
         try {
-            Socket socket = new Socket(InetAddress.getByName("localhost"), 2181);
-            socket.setKeepAlive(true);
+            Socket connectionToserver = new Socket(InetAddress.getByName("localhost"), 2181);
+            connectionToserver.setKeepAlive(true);
+            PrintWriter saidaParaOServidor = new PrintWriter(connectionToserver.getOutputStream());
+            String token = "8713681euihkwjasdgauydjhawdklad";
+            saidaParaOServidor.println("CONN TOKEN: " + token);
+            saidaParaOServidor.flush();
+
+            BufferedReader respostaServidor = new BufferedReader(new InputStreamReader(connectionToserver.getInputStream()));
+            String linhaDeResposta;
             System.out.println("Resposta: \n------------");
-            String condicao = "";
-            Scanner teclado = new Scanner(System.in);
-            while (teclado.hasNextLine() && !condicao.equals("end")) {
-                condicao = teclado.nextLine();
-                zKeeper.setData(ZNODEPATH, condicao.getBytes(), zKeeper.exists(ZNODEPATH, false).getVersion());
+            Scanner s = new Scanner(System.in);
+            while ((linhaDeResposta = respostaServidor.readLine()) != null && !linhaDeResposta.equals("end")) {
+
+                if (linhaDeResposta.equals("needComand")) {
+                    System.out.print("--------------\nDigite algo: ");
+                    String entradaUsuario = s.next() + " " + s.nextLine();
+                    System.out.print("\n");
+                    saidaParaOServidor.println(entradaUsuario);
+                    saidaParaOServidor.flush();
+                } else {
+                    System.out.println(linhaDeResposta);
+                }
             }
-            socket.close();
-            System.out.println("\n ClienteSide--------------Fim da Conexão");
+            connectionToserver.close();
+            System.out.println("\nClienteSide--------------Fim da Conexão");
         } catch (SocketException e) {
             System.out.println("O servidor não conseguiu responder, possívelmente caiu ou está offline");
         }
