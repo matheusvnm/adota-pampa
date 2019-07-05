@@ -20,9 +20,13 @@ public class Principal {
             int version = zKeeper.exists(path , true).getVersion();
             zKeeper.setData(path, data.getBytes(), version);
 
+
+
         } catch (IOException | InterruptedException | KeeperException e) {
             e.printStackTrace();
         }
+
+
 
     }
 

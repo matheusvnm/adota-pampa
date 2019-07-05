@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="redes-app" target="7" />
+      <module name="redes-app" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
