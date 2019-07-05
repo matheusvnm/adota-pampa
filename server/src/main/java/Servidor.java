@@ -3,14 +3,16 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Arrays;
 
 public class Servidor implements Runnable {
 
     private ServerSocket server;
-
-    public Servidor(int port) throws IOException {
+    private InetSocketAddress inet;
+    Servidor(int port) throws IOException {
         this.server = new ServerSocket();
-        server.bind(new InetSocketAddress("localhost", port));
+        this.inet = new InetSocketAddress("localhost", port);
+        server.bind(this.inet);
     }
 
 
@@ -22,9 +24,13 @@ public class Servidor implements Runnable {
         this.server = server;
     }
 
+    public String getCompleteAdress(){
+
+        return this.inet.getHostName() + ":"+ this.inet.getPort();
+    }
+
     @Override
     public void run() {
-        InetAddress inet = this.server.getInetAddress();
         while (!Thread.currentThread().isInterrupted()) {
             Console.log("Esperando conexão");
             Socket cliente = null;

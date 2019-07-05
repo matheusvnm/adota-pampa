@@ -2,40 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2863707c-1b73-458d-ad55-d67a5c2322f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redes-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-sistemas-distribuidos.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Console.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jackson-core-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jackson-databind-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Console.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/DataMonitor$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/DataMonitor$DataMonitorListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/DataMonitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Executor$StreamWriter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Executor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Principal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jackson-core-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/jackson-databind-2.9.8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/DataMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataMonitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/Executor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Executor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/Principal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/DataMonitor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/DataMonitor$DataMonitorListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/DataMonitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/Executor$StreamWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/Executor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Principal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/target/classes/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,11 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Executor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,11 +86,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="993" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="377" />
+    <option name="y" value="145" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -107,16 +98,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="redes-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zNodo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redes-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zNodo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redes-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zNodo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redes-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zNodo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -161,16 +180,19 @@
       <workItem from="1561677486495" duration="661000" />
       <workItem from="1562280920019" duration="122000" />
       <workItem from="1562281435077" duration="175000" />
+      <workItem from="1562290241505" duration="1785000" />
+      <workItem from="1562292188487" duration="1012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5452000" />
+    <option name="totallyTimeSpent" value="8249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="377" y="145" width="927" height="789" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2418373" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19750284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -179,7 +201,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287879" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -206,21 +228,14 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Animal.java" />
+    <entry file="file://$PROJECT_DIR$/../server/src/main/java/Gato.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -228,6 +243,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,9 +1,13 @@
 package com.unipampa.redes;
 
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.ZooKeeper;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.SocketException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Client {
@@ -15,6 +19,7 @@ public class Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 }
@@ -23,9 +28,26 @@ public class Client {
 class BotServerConnector {
     void connect() throws IOException {
 
+
         try {
+            String path = "/NodoCentral";
+            byte[] data;
+            ZooKeeper zKeeper;
+            zKeeper = new ZooKeeper("localhost:2181", 3000, null);
+            data = zKeeper.getData(path, null, null);
+            String dados = new String(data, StandardCharsets.UTF_8); ;
+            String[] parts = dados.split(" ");
+            String servidorUM = parts[0];
+            String servidorDois = parts[1];
+            String servidorTres = parts[2];
+
+
+
             Socket connectionToserver = new Socket(InetAddress.getByName("localhost"), 2181);
             connectionToserver.setKeepAlive(true);
+
+
+
             PrintWriter saidaParaOServidor = new PrintWriter(connectionToserver.getOutputStream());
             String token = "8713681euihkwjasdgauydjhawdklad";
             saidaParaOServidor.println("CONN TOKEN: " + token);
@@ -49,8 +71,11 @@ class BotServerConnector {
             }
             connectionToserver.close();
             System.out.println("\nClienteSide--------------Fim da Conexão");
-        } catch (SocketException e) {
+        } catch (IOException | InterruptedException | KeeperException e) {
             System.out.println("O servidor não conseguiu responder, possívelmente caiu ou está offline");
         }
     }
+
+
+
 }
