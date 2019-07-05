@@ -78,8 +78,11 @@ class BotServerConnector {
                         }
                     }
                     connectionToserver.close();
-                    dropTrue = true;
+                    if(linhaDeResposta.equals("end")){
                     System.out.println("\nClienteSide--------------Fim da Conexão");
+                    } else {
+                        throw new InterruptedException("O servidor caiu. Reconectando...");
+                    }
                 } else {
                     System.out.println("Não foi possivel encontrar um servidor");
                 }
@@ -87,6 +90,6 @@ class BotServerConnector {
                 dropTrue = true;
                 System.out.println("O servidor não conseguiu responder, possívelmente caiu ou está offline");
             }
-        } while (!dropTrue);
+        } while (dropTrue);
     }
 }
