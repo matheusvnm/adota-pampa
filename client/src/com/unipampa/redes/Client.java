@@ -9,7 +9,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Client {
-
     public static void main(String[] args) {
         BotServerConnector botServerConnector = new BotServerConnector();
         try {
@@ -17,30 +16,31 @@ public class Client {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
 }
-
 
 class BotServerConnector {
     void connect() throws IOException {
-
+        //Variavel dropTrue que vai acompanhar o estado da conexão
         boolean dropTrue = false;
         do {
             try {
                 String path = "/NodoCentral";
                 byte[] data;
+                //Variavel de output
                 PrintWriter saidaParaOServidor = null;
+
                 ZooKeeper zKeeper;
                 zKeeper = new ZooKeeper("localhost:2181", 3000, null);
                 data = zKeeper.getData(path, null, null);
+
                 String dados = new String(data, StandardCharsets.UTF_8);
+
                 String[] parts = dados.split(" ");
                 Socket connectionToserver = null;
                 boolean foundServer = false;
+
                 for (String server : parts) {
-                    System.out.println("Entrou");
                     String[] temp = server.split(":");
                     String name = temp[0];
                     int port = Integer.parseInt(temp[1]);
@@ -78,17 +78,12 @@ class BotServerConnector {
                         }
                     }
                     connectionToserver.close();
-                    if(linhaDeResposta.equals("end")){
-                    System.out.println("\nClienteSide--------------Fim da Conexão");
-                    } else {
-                        throw new InterruptedException("O servidor caiu. Reconectando...");
-                    }
                 } else {
                     System.out.println("Não foi possivel encontrar um servidor");
                 }
             } catch (KeeperException | InterruptedException e) {
                 dropTrue = true;
-                System.out.println("O servidor não conseguiu responder, possívelmente caiu ou está offline");
+                System.out.println("O servidor não conseguiu responder, possívelmente caiu ou está offline. Tentando reconectar...");
             }
         } while (dropTrue);
     }

@@ -24,7 +24,7 @@ public class Principal {
             //Verifica se existe uma versão do zKeeper instanciada no path passado por parametro e retorna a versão do zKeeper
             //Armazena a versão em uma variavel int chamada version
             int version = zKeeper.exists(path , true).getVersion();
-            //
+            //Seta os dados do zKeeper, passando o path definido, os dados dos servidores em bytes e a versão
             zKeeper.setData(path, data.getBytes(), version);
 
         } catch (IOException | InterruptedException | KeeperException e) {
