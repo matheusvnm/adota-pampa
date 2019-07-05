@@ -7,28 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="981ad388-20f6-484a-b0d3-1e301100d575" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/unipampa/redes/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/unipampa/redes/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unipampa/redes/BotServerConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unipampa/redes/BotServerConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unipampa/redes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unipampa/redes/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/redes-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/redes-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/AnimalEnumerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/AnimalEnumerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Comunicacao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Comunicacao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Comunicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Comunicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/EstadoDaAplicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/EstadoDaAplicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/ExternalConnection$PostgresConnectionErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/ExternalConnection$PostgresConnectionErrorException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/ExternalConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/ExternalConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Gato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Gato.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Servidor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/StatusAdocao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/StatusAdocao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/StatusDoacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/StatusDoacao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zNodo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zNodo/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/unipampa/redes/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="81" column="50" lean-forward="true" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+            <state relative-caret-position="544">
+              <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -81,11 +61,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="376" />
+    <option name="y" value="144" />
     <option name="width" value="927" />
-    <option name="height" value="1055" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -213,15 +193,15 @@
       <workItem from="1562279460821" duration="1374000" />
       <workItem from="1562281611586" duration="42000" />
       <workItem from="1562289030031" duration="728000" />
-      <workItem from="1562290734160" duration="5614000" />
+      <workItem from="1562290734160" duration="6273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33283000" />
+    <option name="totallyTimeSpent" value="33942000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.8513053" />
@@ -233,7 +213,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3294979" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25809935" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25809935" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,8 +259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/unipampa/redes/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="81" column="50" lean-forward="true" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+        <state relative-caret-position="544">
+          <caret line="78" column="21" lean-forward="true" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
         </state>
       </provider>
     </entry>

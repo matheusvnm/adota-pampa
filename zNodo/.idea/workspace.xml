@@ -5,25 +5,8 @@
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/BotServerConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/BotServerConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/redes-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/redes-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/AnimalEnumerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/AnimalEnumerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Comunicacao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Comunicacao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Comunicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Comunicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/EstadoDaAplicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/EstadoDaAplicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/ExternalConnection$PostgresConnectionErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/ExternalConnection$PostgresConnectionErrorException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/ExternalConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/ExternalConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Gato.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Gato.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/Servidor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/StatusAdocao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/StatusAdocao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/target/classes/StatusDoacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../server/target/classes/StatusDoacao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,16 +21,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="150">
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Executor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="750">
@@ -95,7 +78,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="376" />
     <option name="y" value="144" />
     <option name="width" value="927" />
@@ -190,15 +173,15 @@
       <workItem from="1562280920019" duration="122000" />
       <workItem from="1562281435077" duration="175000" />
       <workItem from="1562290241505" duration="1785000" />
-      <workItem from="1562292188487" duration="2908000" />
+      <workItem from="1562292188487" duration="2985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10145000" />
+    <option name="totallyTimeSpent" value="10222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="376" y="144" width="927" height="789" extended-state="1" />
+    <frame x="376" y="144" width="927" height="789" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19750284" />
@@ -210,7 +193,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287879" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287879" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -241,13 +224,6 @@
     <entry file="file://$PROJECT_DIR$/../server/src/main/java/Gato.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -265,6 +241,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -5,25 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/com/unipampa/redes/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/BotServerConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/BotServerConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../client/target/classes/com/unipampa/redes/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redes-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/redes-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AnimalEnumerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AnimalEnumerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Comunicacao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Comunicacao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Comunicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Comunicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EstadoDaAplicacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/EstadoDaAplicacao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExternalConnection$PostgresConnectionErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExternalConnection$PostgresConnectionErrorException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExternalConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExternalConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Gato.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Gato.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Servidor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StatusAdocao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StatusAdocao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StatusDoacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StatusDoacao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../zNodo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../zNodo/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -42,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,12 +191,12 @@
       <workItem from="1561582022995" duration="1438000" />
       <workItem from="1561677486495" duration="661000" />
       <workItem from="1562280836878" duration="82000" />
-      <workItem from="1562290269396" duration="6347000" />
+      <workItem from="1562290269396" duration="7109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11584000" />
+    <option name="totallyTimeSpent" value="12346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="993" y="25" width="927" height="1055" extended-state="4" />
@@ -230,7 +211,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -286,8 +267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Principal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
